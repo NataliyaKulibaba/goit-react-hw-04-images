@@ -6,7 +6,6 @@ function fetchTitle(title, page) {
       return response.json();
     })
     .then(gallery => {
-      console.log(gallery.hits);
       return gallery.hits;
     });
 }
