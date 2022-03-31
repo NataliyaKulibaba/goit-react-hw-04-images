@@ -68,7 +68,7 @@ setPage( page + 1 );
   };
 
   const onOpenModal = e => {
-    console.log(e.target.id)
+
 
     setShowModal(true)
     

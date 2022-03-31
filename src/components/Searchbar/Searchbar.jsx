@@ -4,11 +4,9 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import s from './Searchbar.module.css';
 
-function Searchbar(onSubmit){
+function Searchbar({onSubmit}
+){
   const [title, setTitle] = useState('')
-
-
-
 
   const handleTitleChange = e => {
     setTitle( e.currentTarget.value.toLowerCase());
@@ -23,7 +21,7 @@ function Searchbar(onSubmit){
 
       return;
     }
-    onSubmit(title);
+   onSubmit(title);
 
    setTitle('');
   };
@@ -52,3 +50,4 @@ function Searchbar(onSubmit){
 }
 
 export default Searchbar;
+
