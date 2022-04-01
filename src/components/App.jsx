@@ -25,9 +25,11 @@ function App(){
 if(title ===''){
   return
 }
-
+setLoading(true)
 titleFetchAPI.fetchTitle(title, page)
+
         .then(gallery => {
+          
           if (!gallery.length) {
             setGallery([]);
             Notify.failure(
@@ -35,8 +37,8 @@ titleFetchAPI.fetchTitle(title, page)
             );
             return;
           }
-
-          if (!gallery) {
+            
+          if (page===1) {
             setGallery(gallery);
           } else {
            setGallery(prevGallery => [...prevGallery, ...gallery]);
@@ -61,6 +63,7 @@ titleFetchAPI.fetchTitle(title, page)
 
   const handleformSubmit = title => {
     setTitle(title);
+    setPage(1)
   };
 
   const onClickLoadMore = () => {

@@ -4,8 +4,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import s from './Searchbar.module.css';
 
-function Searchbar({onSubmit}
-){
+function Searchbar({onSubmit}){
   const [title, setTitle] = useState('')
 
   const handleTitleChange = e => {
